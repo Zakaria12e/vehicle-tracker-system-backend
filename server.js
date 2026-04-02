@@ -40,13 +40,14 @@ app.use(helmet());
 app.use(xss());
 app.use(rateLimit({ windowMs: 10 * 60 * 1000, max: 100 }));
 app.use(hpp());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
-app.options('*', cors());
+const corsOptions = { origin: process.env.FRONTEND_URL, credentials: true };
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'public/uploads'), {
   setHeaders: (res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.setHeader('Access-Control-Allow-Origin', process.env.FRONTEND_URL);
     res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
   }
 }));
