@@ -1,6 +1,6 @@
 const Alert = require("../models/Alert");
 const geocodingService = require("../services/geocodingService");
-const socket = require("../Utils/socket");
+const socket = require("../utils/socket");
 const User = require("../models/User");
 const colors = require('colors');
 

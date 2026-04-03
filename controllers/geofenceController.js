@@ -2,7 +2,7 @@ const Geofence = require('../models/Geofence');
   const Vehicle = require('../models/Vehicle');
   const geoUtils = require('../utils/geoUtils');
   const asyncHandler = require('../middleware/async');
-  const ErrorResponse = require('../Utils/errorResponse');
+  const ErrorResponse = require('../utils/errorResponse');
   const axios = require('axios');
   const mongoose = require('mongoose'); // Import mongoose to use ObjectId
 

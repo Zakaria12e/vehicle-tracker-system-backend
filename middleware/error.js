@@ -1,5 +1,5 @@
 // middleware/error.js
-const ErrorResponse = require('../Utils/errorResponse'); // Correct the import path if needed
+const ErrorResponse = require('../utils/errorResponse'); // Correct the import path if needed
 
 const errorHandler = (err, req, res, next) => {
   let error = { ...err }; // Clone the error object to prevent mutation of the original error

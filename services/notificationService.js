@@ -1,6 +1,6 @@
 const Notification = require('../models/Notification');
 const User = require('../models/User');
-const sendEmail = require('../Utils/sendEmail');
+const sendEmail = require('../utils/sendEmail');
 const socketService = require('./socketService');
 
 /**

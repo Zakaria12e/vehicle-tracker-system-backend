@@ -1,6 +1,6 @@
 const net = require('net');
 const vehicleController = require('../controllers/vehicleController');
-const { writeLog } = require('../Utils/logger');
+const { writeLog } = require('../utils/logger');
 
 let client;
 let buffer = '';

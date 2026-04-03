@@ -1,6 +1,6 @@
 const User = require('../models/User');
 const Vehicle = require('../models/Vehicle');
-const ErrorResponse = require('../Utils/errorResponse');
+const ErrorResponse = require('../utils/errorResponse');
 
 exports.getAllUsers = async (req, res, next) => {
   try {
