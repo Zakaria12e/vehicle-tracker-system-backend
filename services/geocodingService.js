@@ -1,7 +1,7 @@
 // services/geocodingService.js
 const opencage = require('opencage-api-client');
 
-const OPENCAGE_KEY = '9a6f7ec6a40748c3bba770318a958e7e';
+const OPENCAGE_KEY = process.env.OPENCAGE_API_KEY || '346b714cadf94d47ad3f22c51fd58800';
 
 exports.reverseGeocode = async (lat, lon) => {
   try {
