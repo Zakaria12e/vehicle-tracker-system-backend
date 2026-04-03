@@ -64,9 +64,9 @@ exports.login = asyncHandler(async (req, res, next) => {
 exports.logout = asyncHandler(async (req, res, next) => {
   res.cookie('token', '', {
     httpOnly: true,
-    expires: new Date(0),                // ✅ Expire immédiatement
-    sameSite: 'Lax',                     // ✅ Protection CSRF
-    secure: process.env.NODE_ENV === 'production',  // ✅ Pour HTTPS en prod
+    expires: new Date(0),
+    sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
+    secure: process.env.NODE_ENV === 'production',
   });
 
   res.status(200).json({
@@ -274,6 +274,7 @@ const sendTokenResponse = (user, statusCode, res) => {
 
   if (process.env.NODE_ENV === 'production') {
     options.secure = true;
+    options.sameSite = 'None';
   }
 
   res
