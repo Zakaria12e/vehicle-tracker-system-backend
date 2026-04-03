@@ -1,7 +1,7 @@
 // controllers/immobilizationController.js
 const Immobilization = require('../models/Immobilization');
 const catchAsync = require('../utils/catchAsync');
-const AppError = require('../utils/AppError');
+const AppError = require('../utils/appError');
 const Vehicle = require('../models/Vehicle');
 
 // Créer une nouvelle immobilisation

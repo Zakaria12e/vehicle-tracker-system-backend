@@ -3,7 +3,7 @@ const Trip = require('../models/Trip');
 const Position = require('../models/Position');
 const User = require('../models/User');
 const catchAsync = require('../utils/catchAsync');
-const AppError = require('../utils/AppError');
+const AppError = require('../utils/appError');
 const moment = require('moment');
 
 /**

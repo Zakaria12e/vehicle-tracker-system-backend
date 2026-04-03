@@ -1,7 +1,7 @@
 const Vehicle = require('../models/Vehicle');
   const User = require('../models/User');
   const catchAsync = require('../utils/catchAsync');
-  const AppError = require('../utils/AppError');
+  const AppError = require('../utils/appError');
   const axios = require('axios');
   const moment = require('moment');
   const socket = require('../utils/socket');

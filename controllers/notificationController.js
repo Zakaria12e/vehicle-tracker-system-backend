@@ -1,6 +1,6 @@
 const notificationService = require('../services/notificationService');
 const Vehicle = require('../models/Vehicle');
-const asyncHandler = require('../middleware/asyncHandler');
+const asyncHandler = require('../middleware/async');
 
 /**
  * Get all notifications for the logged-in user
